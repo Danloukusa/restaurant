@@ -1,58 +1,4 @@
-import pageLoad from './pageLoad';
-import loadPage from './pageLoad';
-
-
-function clearTabContents(){
-    // Gonna put button into the tab.
-    // AKA, button is CHILD of TAB
-     let container = document.getElementById("tab");
-     if(container != null)
-         container.remove();
-}
-function putTab1(){
-    clearTabContents();
-    // make children of tab1
-    let majorParent = document.getElementById("tabContent");
-    let child = document.createElement("div");
-    child.id = "tab";
-    majorParent.appendChild(child);
-
-    majorParent = document.getElementById("tab");
-    child = document.createElement("p");
-    child.innerText = "Welcome to the lighthouse restauraunt. Please note that disruptful patrons will be sent to the songbird.";
-    majorParent.appendChild(child);
-    // place children of tab1
-}
-
-function putTab2(){
-    clearTabContents();
-    // make children of tab1
-    let majorParent = document.getElementById("tabContent");
-    let child = document.createElement("div");
-    child.id = "tab";
-    majorParent.appendChild(child);
-
-    majorParent = document.getElementById("tab");
-    child = document.createElement("p");
-    child.innerText = "Here is some sample text about stuff you're never gonna read.";
-    majorParent.appendChild(child);
-    // place children of tab1
-}
-
-function putTab3(){
-    clearTabContents();
-    // make children of tab1
-    let majorParent = document.getElementById("tabContent");
-    let child = document.createElement("div");
-    child.id = "tab";
-    majorParent.appendChild(child);
-
-    majorParent = document.getElementById("tab");
-    child = document.createElement("p");
-    child.innerText = "The quick brown fox jumps over the lazy dog.";
-    majorParent.appendChild(child);
-    // place children of tab1
-}
+// When page loads, make tab Structure, and autofill first tab.
 function tabInitialize(){
     console.log("BS");
     document.getElementById("tab1").addEventListener("click", putTab1);
@@ -67,8 +13,55 @@ function tabInitialize(){
     // make and place TAB 3
 }
 
-loadPage();
-tabInitialize();
+function clearTabContents(){
+    // Gonna put button into the tab.
+    // AKA, button is CHILD of TAB
+    let container = document.getElementById("tabContent");
+    container.removeChild();
+}
 
 
-console.log("Basic Message");
+// inject html
+function putTab1(){
+    clearTabContents();
+    // make children of tab1
+    let majorParent = document.getElementById("tabContent");
+    let child = document.createElement("div");
+    child.id = "tab1";
+    majorParent.appendChild(child);
+
+    child = document.createElement("p");
+    child.innerText = "Welcome to the lighthouse restauraunt. Please note that disruptful patrons will be sent to the songbird.";
+    majorParent.appendChild(child);
+    // place children of tab1
+}
+
+function putTab2(){
+    clearTabContents();
+    // make children of tab1
+    let majorParent = document.getElementById("tabContent");
+    let child = document.createElement("div");
+    child.id = "tab2";
+    majorParent.appendChild(child);
+
+    child = document.createElement("p");
+    child.innerText = "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO";
+    majorParent.appendChild(child);
+    // place children of tab1
+    // see tab1
+}
+
+function putTab3(){
+    // make children of tab1
+    clearTabContents();
+    let majorParent = document.getElementById("tabContent");
+    let child = document.createElement("div");
+    child.id = "tab3";
+    majorParent.appendChild(child);
+
+    child = document.createElement("p");
+    child.innerText = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+    majorParent.appendChild(child);
+    // place children of tab1
+    // see tab1
+}
