@@ -29,10 +29,6 @@ function putTab1(){
     let child = document.createElement("div");
     child.id = "tab1";
     majorParent.appendChild(child);
-
-    child = document.createElement("p");
-    child.innerText = "Welcome to the lighthouse restauraunt. Please note that disruptful patrons will be sent to the songbird.";
-    majorParent.appendChild(child);
     // place children of tab1
 }
 

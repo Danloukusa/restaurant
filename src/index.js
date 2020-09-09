@@ -1,57 +1,89 @@
-import pageLoad from './pageLoad';
 import loadPage from './pageLoad';
 
 
 function clearTabContents(){
     // Gonna put button into the tab.
     // AKA, button is CHILD of TAB
-     let container = document.getElementById("tab");
+     let container = document.getElementById("tabContent");
      if(container != null)
          container.remove();
 }
 function putTab1(){
     clearTabContents();
     // make children of tab1
-    let majorParent = document.getElementById("tabContent");
+    document.getElementById("header").innerText = "Welcome to the Lighthouse Cafe";
+    let majorParent = document.getElementById("content");
     let child = document.createElement("div");
-    child.id = "tab";
+    child.id = "tabContent";
     majorParent.appendChild(child);
 
-    majorParent = document.getElementById("tab");
+    majorParent = document.getElementById("tabContent");
     child = document.createElement("p");
     child.innerText = "Welcome to the lighthouse restauraunt. Please note that disruptful patrons will be sent to the songbird.";
     majorParent.appendChild(child);
+
+    let targetElement = document.getElementById("tabContent")
+    let childElement = document.createElement("img");
+    childElement.src="Montauk_Point_Lighthouse.jpg";
+    childElement.alt="Montauk_Point_Lighthouse";
+    childElement.id = "lightPic";
+    targetElement.appendChild(childElement);
+
+
+    childElement = document.createElement("h1");
+    childElement.innerText = "Lighthouse Cafe";
+    targetElement.appendChild(childElement);
+
+    childElement = document.createElement("p");
+    childElement.innerText = "Any food is better than no food.";
+    targetElement.appendChild(childElement);
     // place children of tab1
 }
 
+// ENTREES
 function putTab2(){
     clearTabContents();
+    document.getElementById("header").innerText = "Killer Entrees";
     // make children of tab1
-    let majorParent = document.getElementById("tabContent");
+    let majorParent = document.getElementById("content");
     let child = document.createElement("div");
-    child.id = "tab";
+    child.id = "tabContent";
     majorParent.appendChild(child);
 
-    majorParent = document.getElementById("tab");
+    majorParent = document.getElementById("tabContent");
     child = document.createElement("p");
-    child.innerText = "Here is some sample text about stuff you're never gonna read.";
+    child.id = "song";
+    child.innerText = "The SongBird Special";
     majorParent.appendChild(child);
+
+    child = document.createElement("img");
+    child.src = "songBird.jpg";
+    document.getElementById("song").appendChild(child);
+    
     // place children of tab1
 }
 
+// DESSERTS
 function putTab3(){
     clearTabContents();
     // make children of tab1
-    let majorParent = document.getElementById("tabContent");
+    document.getElementById("header").innerText = "Deadly Desserts";
+    let majorParent = document.getElementById("content");
     let child = document.createElement("div");
-    child.id = "tab";
+    child.id = "tabContent";
     majorParent.appendChild(child);
 
-    majorParent = document.getElementById("tab");
+    majorParent = document.getElementById("tabContent");
     child = document.createElement("p");
-    child.innerText = "The quick brown fox jumps over the lazy dog.";
+    child.id = "murica";
+    child.innerText = "Father Freedom";
     majorParent.appendChild(child);
-    // place children of tab1
+
+    child = document.createElement("img");
+    child.src = "patriot.jpg";
+    document.getElementById("murica").appendChild(child);
+    
+
 }
 function tabInitialize(){
     console.log("BS");

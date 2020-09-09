@@ -1,27 +1,36 @@
 function loadPage(){
     let targetElement = document.getElementById("content");
-    let childElement = document.createElement("ul");
-    childElement.id = "navBar";
+    //targetElement.style.backgroundImage = "url('inside.jpg')";
+    //targetElement.style.backgroundSize = "cover";
 
-    targetElement.appendChild(childElement);
 
-    childElement = document.createElement("li");
-    childElement.innerText = "Tab 1";
+    let listContain = document.getElementById("navBar");
+
+    let childElement = document.createElement("li");
+    childElement.innerText = "HOME PAGE";
     childElement.id = "tab1";
-    targetElement.appendChild(childElement);
+    listContain.appendChild(childElement);
 
     childElement = document.createElement("li");
-    childElement.innerText = "Tab 2";
+    childElement.innerText = "ENTREES";
     childElement.id = "tab2";
-    targetElement.appendChild(childElement);
+    listContain.appendChild(childElement);
 
     childElement = document.createElement("li");
-    childElement.innerText = "Tab 3";
+    childElement.innerText = "DESSERTS";
     childElement.id = "tab3";
-    targetElement.appendChild(childElement);
+    listContain.appendChild(childElement);
+
+
+    childElement = document.createElement("h1");
+    childElement.id = "header";
+    childElement.innerText = "Welcome to the Lighthouse Cafe!";
+    listContain.appendChild(childElement);
+
 
     childElement = document.createElement("br");
     targetElement.appendChild(childElement);
+
 
     // Make tab1,
     // Make tab2,
@@ -33,19 +42,7 @@ function loadPage(){
     targetElement.appendChild(childElement);
 
 
-    childElement = document.createElement("img");
-    childElement.href="dist/Montauk_Point_Lighthouse.jpg";
-    childElement.alt="Montauk_Point_Lighthouse";
-    childElement.id = "lightPic";
-    targetElement.appendChild(childElement);
-
-    childElement = document.createElement("h1");
-    childElement.innerText = "Lighthouse Cafe";
-    targetElement.appendChild(childElement);
-
-    childElement = document.createElement("p");
-    childElement.innerText = "Any food is better than no food.";
-    targetElement.appendChild(childElement);
+    
 }
 
 export default loadPage;
